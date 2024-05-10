@@ -1,0 +1,65 @@
+function calc(){
+    let option = document.getElementsByName("Pizza");
+    let size = document.getElementsByName("size");
+    let Pe = document.getElementsByName("Pepperoni");
+    let M = document.getElementsByName("3Meat");
+    let Pi = document.getElementsByName("Pineapple");
+    
+    if (option[0].checked && size[0].checked){ 
+        out1.innerHTML="$1.00";
+        if (Pe[0].checked){
+            out1.innerHTML = "2.00";
+        }
+        if (M[0].checked){
+            out1.innerHTML = "2.50";
+        }
+    } else if (option[0].checked && size[1].checked) { 
+        out1.innerHTML = "$2.00";
+        if (Pe[0].checked){
+            out1.innerHTML = "3.00";
+        }
+        if (M[0].checked){
+            out1.innerHTML = "3.50";
+        }
+    } else if (option[0].checked && size[2].checked) {  
+        out1.innerHTML = "$3.00";
+        if (Pe[0].checked){
+            out1.innerHTML = "4.00";
+        }
+        if (M[0].checked){
+            out1.innerHTML = "4.50";
+        }
+    }
+
+    if (option[1].checked && size[0].checked){ 
+        out1.innerHTML = "$1.50";
+        if (Pe[0].checked){
+            out1.innerHTML = "2.50";
+        }
+        if (M[0].checked){
+            out1.innerHTML = "3.00";
+        }
+    } else if (option[1].checked && size[1].checked) { 
+        out1.innerHTML = "$2.50";
+        if (Pe[0].checked){
+            out1.innerHTML = "3.50";
+        }
+        if (M[0].checked){
+            out1.innerHTML = "4.00";
+        }
+    } else if (option[1].checked && size[2].checked) { 
+        out1.innerHTML = "$3.50";
+        if (Pe[0].checked){
+            out1.innerHTML = "4.50";
+        }
+        if (M[0].checked){
+            out1.innerHTML = "5.00";
+        }
+    }
+
+    if(Pi[0].checked){
+        out1.innerHTML="no"
+    }
+
+    
+}
