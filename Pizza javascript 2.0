@@ -1,0 +1,71 @@
+function calc(){
+    var resultParagraph = document.getElementById('result');
+    var cost = 0;
+    let option = document.getElementsByName("Pizza");
+    let size = document.getElementsByName("size");
+    let Pe = document.getElementsByName("Pepperoni");
+    let M = document.getElementsByName("3Meat");
+    let Pi = document.getElementsByName("Pineapple");
+
+
+    
+    if (option[0].checked){ 
+      if(size[0].checked){
+      cost = cost + 9.99;
+        if (Pe[0].checked){
+            cost = cost + 2;
+        }
+        if (M[0].checked){
+            cost = cost + 2
+        }
+    } if(size[1].checked){
+        cost = cost + 11.99;
+        if (Pe[0].checked){
+            cost = cost + 2;
+        }
+        if (M[0].checked){
+            cost = cost + 2
+        }
+} if (size[2].checked) { 
+    cost = cost + 13.99;
+    if (Pe[0].checked){
+        cost = cost + 2;
+    }
+    if (M[0].checked){
+        cost = cost + 2
+    }
+    }
+}
+if (option[1].checked){
+    cost = cost + 3; 
+    if(size[0].checked){
+    cost = cost + 9.99;
+      if (Pe[0].checked){
+          cost = cost + 2;
+      }
+      if (M[0].checked){
+          cost = cost + 2
+      }
+  } if(size[1].checked){
+      cost = cost + 11.99;
+      if (Pe[0].checked){
+          cost = cost + 2;
+      }
+      if (M[0].checked){
+          cost = cost + 2
+      }
+} if (size[2].checked) { 
+  cost = cost + 13.99;
+  if (Pe[0].checked){
+      cost = cost + 2;
+  }
+  if (M[0].checked){
+      cost = cost + 2
+  }
+  }
+}
+    resultParagraph.innerText = " your cost is equal to $" + (Math.round(cost)); 
+    if(Pi[0].checked){
+        out1.innerHTML="no"
+    }
+ }   
